@@ -2,7 +2,9 @@
 fun main() {
     // runSmartDevice()
     // runCar()
-    runCall()
+    // runCall()
+    // runAnimal()
+    runCarEngine()
 }
 
 fun runSmartDevice() {
@@ -52,8 +54,8 @@ class Car {
 	println("Speed is $speed and level is $level")
     }
 }
-// Constructor
 
+// Constructor
 fun runCall() {
     val phone = Phone("Hamza", "+21222020202")
 
@@ -63,6 +65,51 @@ fun runCall() {
 class Phone(val name: String, val number: String) {
     fun call() {
 	println("Calling $name - $number ....")
+    }
+}
+
+// Relationship
+fun runAnimal() {
+    val dog = Dog()
+    dog.Initial()
+}
+open class Animal(name: String) {
+    open fun Initial() {
+        println("The animal name is $name")
+    }
+    fun Die() {
+	println("Im dead")
+    }
+}
+
+// is-a relation
+class Dog(name: String) : Animal(name = name) {
+    override fun Initial() {
+	super.Initial()
+        println("I am Dog")
+	// We used Die() function from Animal class
+	Die()
+    }
+}
+
+// has-a relation
+fun runCarEngine() {
+    val engine = Engine()
+    val car2 = Car2(engine)
+
+    car2.drive()
+}
+
+class Engine {
+    fun start() {
+        println("Engine started")
+    }
+}
+
+class Car2(val engine: Engine) {
+    fun drive() {
+        engine.start()
+        println("Car is driving")
     }
 }
 

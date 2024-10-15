@@ -138,7 +138,7 @@ class SmartTvDevice3() {
 }
 
 class SmartLightDevice3() {
-    public val brightness: Int = 0;
+    public var brightness: Int = 0;
 
     fun decreaseBrightness() {
 	brightness++

@@ -70,10 +70,10 @@ class Phone(val name: String, val number: String) {
 
 // Relationship
 fun runAnimal() {
-    val dog = Dog()
+    val dog = Dog("Dog")
     dog.Initial()
 }
-open class Animal(name: String) {
+open class Animal(val name: String) {
     open fun Initial() {
         println("The animal name is $name")
     }
@@ -113,3 +113,35 @@ class Car2(val engine: Engine) {
     }
 }
 
+
+// Challenge
+
+class SmartDevice3(val name: String, val category: String, val deviceType: String) {
+    fun printDeviceInfo() {
+	println("Device name: $name, category $category, type: $deviceType")
+    }
+}
+
+class SmartTvDevice3() {
+    public var volume: Int = 0
+    public var channel: Int = 1
+
+    fun decreaseVolume() {
+	volume++
+	println("Volume has been decreased")
+    }
+
+    fun previousChannel() {
+	channel--
+	println("Channel has been changed")
+    }
+}
+
+class SmartLightDevice3() {
+    public val brightness: Int = 0;
+
+    fun decreaseBrightness() {
+	brightness++
+	println("Brightness has been decreased")
+    }
+}

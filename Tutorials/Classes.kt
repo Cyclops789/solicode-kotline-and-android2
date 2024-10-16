@@ -3,8 +3,8 @@ fun main() {
     // runSmartDevice()
     // runCar()
     // runCall()
-    // runAnimal()
-    runCarEngine()
+    runAnimal()
+    // runCarEngine()
 }
 
 fun runSmartDevice() {
@@ -39,7 +39,7 @@ fun runCar() {
 
 class Car {
     var speed = 1
-       get() = field
+       // get() = field
        set(value) {
           field = 2 * value
        }
@@ -62,7 +62,7 @@ fun runCall() {
     phone.call()
 }
 
-class Phone(val name: String, val number: String) {
+class Phone(val name: String = "Hamza", val number: String) {
     fun call() {
 	println("Calling $name - $number ....")
     }

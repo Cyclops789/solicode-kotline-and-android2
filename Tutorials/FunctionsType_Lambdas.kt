@@ -8,6 +8,10 @@ fun main() {
 
     treatFunction()
     trickFunction()
+
+    repeat(4) { index ->
+	println("[$index] Repeating print for 4 times")
+    }
 }
 
 

@@ -73,11 +73,21 @@ fun App() {
         image = painterResource(R.drawable.crocoparc_park)
     )
 
-    val listOfPlaces = listOf(agadirOufla, agadirCrocoparc)
+    val agadirTelepherique = Place(
+        name = "Téléphérique",
+        description = "La télécabine d'Agadir est un projet comprenant 2 lignes de télécabine touristique à Agadir au Maroc. Longue de 1 700 mètres, la première ligne a été mise en service le 16 juillet 2022 entre le pont de Tildi et Agadir Oufla.",
+        phone = "0522-97931",
+        location = "RN 8 PK 16, Agadir, Drarga 80046",
+        image = painterResource(R.drawable.telepheri4
+        )
+    )
+
+    val listOfPlaces = listOf(agadirOufla, agadirCrocoparc, agadirTelepherique)
     var currentIndex by remember { mutableStateOf(0) }
     val currentPlace = when (currentIndex) {
         0 -> listOfPlaces[0]
         1 -> listOfPlaces[1]
+        2 -> listOfPlaces[2]
         else -> listOfPlaces[0]
     }
 

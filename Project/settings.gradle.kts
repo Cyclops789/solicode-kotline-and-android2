@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Dice Roller"
+rootProject.name = "AgadirCity"
 include(":app")
+ 
